@@ -32,8 +32,7 @@ def process_video(video_path, frame_holder, gate):
     previous_positions = {}
     counted_ids = set()
 
-    while cap.isOpened():
-
+    for _ in range(500):
         ret, frame = cap.read()
         if not ret:
             break
@@ -128,4 +127,5 @@ with iot1:
 with iot2:
     st.metric("Smoke & Fire Status","Normal")
     st.metric("Gate Status","Closed")
+
 
