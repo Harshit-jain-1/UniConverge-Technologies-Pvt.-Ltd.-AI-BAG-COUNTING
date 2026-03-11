@@ -2,8 +2,14 @@ import os
 os.environ["YOLO_CONFIG_DIR"] = "/tmp"
 
 import streamlit as st
-import cv2
 import numpy as np
+
+# Safe OpenCV import
+try:
+    import cv2
+except Exception as e:
+    st.warning("OpenCV could not be loaded. Some features may not work.")
+    cv2 = None
 from ultralytics import YOLO
 
 st.set_page_config(page_title="Warehouse Management System", layout="wide")
@@ -128,6 +134,7 @@ with iot1:
 with iot2:
     st.metric("Smoke & Fire Status","Normal")
     st.metric("Gate Status","Closed")
+
 
 
 
