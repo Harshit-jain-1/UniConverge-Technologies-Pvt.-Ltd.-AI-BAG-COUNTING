@@ -1,8 +1,7 @@
 import os
-os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
 os.environ["YOLO_CONFIG_DIR"] = "/tmp"
 import streamlit as st
-import cv2
+from cv2 import cv2
 import numpy as np
 from ultralytics import YOLO
 
@@ -128,6 +127,7 @@ with iot1:
 with iot2:
     st.metric("Smoke & Fire Status","Normal")
     st.metric("Gate Status","Closed")
+
 
 
 
