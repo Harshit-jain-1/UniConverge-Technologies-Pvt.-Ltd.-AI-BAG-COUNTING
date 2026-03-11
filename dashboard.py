@@ -2,7 +2,6 @@ import os
 os.environ["YOLO_CONFIG_DIR"] = "/tmp"
 
 import streamlit as st
-import streamlit as st
 import numpy as np
 
 # Safe OpenCV import
@@ -136,6 +135,7 @@ with iot1:
 with iot2:
     st.metric("Smoke & Fire Status","Normal")
     st.metric("Gate Status","Closed")
+
 
 
 
