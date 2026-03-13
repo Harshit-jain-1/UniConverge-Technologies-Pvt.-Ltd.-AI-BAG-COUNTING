@@ -19,9 +19,9 @@ unsafe_allow_html=True
 )
 
 video_paths = {
-    "gate1": "videos/gate1.mp4",
-    "gate2": "videos/gate2.mp4",
-    "gate3": "videos/gate3.mp4"
+    "gate1": "videos/Problem Statement Scenario1.mp4",
+    "gate2": "videos/Problem Statement Scenario2.mp4",
+    "gate3": "videos/Problem Statement Scenario3.mp4"
 }
 
 bag_in = {"gate1":0,"gate2":0,"gate3":0}
@@ -128,6 +128,7 @@ with iot1:
 with iot2:
     st.metric("Smoke & Fire Status","Normal")
     st.metric("Gate Status","Closed")
+
 
 
 
